@@ -1,11 +1,15 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-home:
-    path: /
-    controller: App\Controller\HomeController::index
-biens:
-    path: /bien
-    controller: App\Controller\BiensController::index
+#home:
+#    path: /
+#    controller: App\Controller\HomeController::index
+#biens.index:
+#    path: /biens
+#    controller: App\Controller\BiensController::index
+
+#biens.show:
+#   path: /biens/{slug}-{id}
+#  controller: App\Controller\BiensController::show
 
 

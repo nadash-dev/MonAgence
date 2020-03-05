@@ -8,4 +8,25 @@
     <p>composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en</p>
 </div>
 
+
+<div class="container">
+   <h2>Les derniers biens</h2>
+   <div class="row flex">
+      {% for proprety in propreties %}
+          <div class="col-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">
+                          <a href="{{ path('biens.show', {id: proprety.id ,slug: proprety.slug}) }}">{{ proprety.title }}</a>
+                      </h5>
+                      <p class="card-text">{{ proprety.city }} ({{ proprety.postalCode }})</p>
+                      <div class="text-primary" style="font-weight: bold; font-size: 2rem  ">{{ proprety.getFormatPrice() }}€</div>
+                  </div>
+              </div>
+          </div>
+      {% endfor %}
+   </div>
+
+</div>
+
 {% endblock %}
